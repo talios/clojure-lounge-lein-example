@@ -2,10 +2,10 @@
   (:use [noir.core :only [defpartial]]
         [hiccup.page-helpers :only [include-css html5]]))
 
-(defpartial layout [& content]
+(defpartial layout [title & content]
             (html5
               [:head
-               [:title "clojure-lounge-test"]
+               [:title title]
                (include-css "/css/reset.css")]
               [:body
                [:div#wrapper
